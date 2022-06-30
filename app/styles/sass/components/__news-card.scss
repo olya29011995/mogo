@@ -1,0 +1,21 @@
+.news-card {
+  display: flex;
+
+  &__content {
+    padding-left: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--primary-color);
+    width: 35%;
+    flex-shrink: 0;
+  }
+}

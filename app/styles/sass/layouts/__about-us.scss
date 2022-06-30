@@ -1,0 +1,114 @@
+.about-us {
+  padding: 50px 0 100px 0;
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--primary-color);
+    text-align: center;
+    padding-bottom: 55px;
+  }
+  @include breakpoint(xl) {
+    font-size: 14px;
+  }
+
+  &__card {
+    position: relative;
+
+    &:hover .about-us__card-block {
+      background: linear-gradient(
+        360deg,
+        rgba(237, 215, 137, 0.9) 0%,
+        rgba(233, 130, 131, 0.9) 100%
+      );
+      position: absolute;
+      bottom: 15px;
+      left: -15px;
+      transition: 0.4s linear;
+      opacity: 1;
+      @include breakpoint(sm) {
+        bottom: 0px;
+        left: 0px;
+      }
+    }
+  }
+
+  &__card-wrap {
+    position: relative;
+    padding-bottom: 90%;
+    overflow: hidden;
+    @include breakpoint(xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card-pic {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__card-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      360deg,
+      rgba(237, 215, 137, 0.9) 0%,
+      rgba(233, 130, 131, 0.9) 100%
+    );
+    opacity: 0;
+    @include breakpoint(sm) {
+      height: 30%;
+    }
+  }
+
+  &__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &__card-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include breakpoint(sm) {
+      top: 10%;
+    }
+  }
+
+  &__card-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include breakpoint(sm) {
+      top: 80%;
+      left: -70px;
+    }
+  }
+
+  &__card-text {
+    padding-top: 100px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+      font-size: 15px;
+    }
+  }
+}

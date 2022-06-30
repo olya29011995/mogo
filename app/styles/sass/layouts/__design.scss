@@ -1,0 +1,61 @@
+.design {
+  background: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 100%
+    ),
+    url("../images/dist/design/devices_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 157px;
+  position: relative;
+  @include breakpoint(xl) {
+    padding-bottom: 50px;
+  }
+
+  &__head {
+    margin-bottom: 60px;
+    @include breakpoint(lg) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__content {
+    min-width: 445px;
+    @include breakpoint(lg) {
+      min-width: 400px;
+    }
+    @include breakpoint(md) {
+      min-width: 200px;
+    }
+  }
+
+  &__tablet-pic {
+    margin: 0 auto;
+  }
+
+  &__mobile-pic {
+    max-width: 200px;
+    position: absolute;
+    bottom: -110px;
+    right: 300px;
+    @include breakpoint(xl) {
+      right: 120px;
+    }
+    @include breakpoint(lg) {
+      max-width: 170px;
+      right: 100px;
+      bottom: -60px;
+    }
+    @include breakpoint(md) {
+      right: 40px;
+      max-width: 140px;
+    }
+    @include breakpoint(sm) {
+      right: 20px;
+      max-width: 110px;
+      bottom: -30px;
+    }
+  }
+}
